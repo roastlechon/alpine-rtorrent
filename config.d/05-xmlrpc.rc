@@ -9,4 +9,4 @@ system.daemon.set = true
 
 #INET socket
 # network.scgi.open_port = 0.0.0.0:16891
-network.scgi.open_local = /home/rtorrent/rtorrent/rpc.socket
+network.scgi.open_local = /home/rtorrent/rtorrent/socket/rtorrent.socket
