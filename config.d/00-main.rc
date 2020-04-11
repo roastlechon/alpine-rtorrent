@@ -23,7 +23,7 @@ session.use_lock.set = no
 
 ## Listening port for incoming peer traffic (fixed; you can also randomize it)
 network.port_range.set = 50000-50000
-network.port_random.set = no
+##network.port_random.set = yes
 
 # Set whether the client should try to connect to UDP trackers.
 trackers.use_udp.set = yes
