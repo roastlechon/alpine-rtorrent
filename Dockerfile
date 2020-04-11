@@ -17,9 +17,9 @@ RUN addgroup -g $UGID rtorrent && \
     mkdir /home/rtorrent/rtorrent/socket && \
     chown -R rtorrent:rtorrent /home/rtorrent/rtorrent
 
-COPY --chown=rtorrent:rtorrent config.d/ /home/rtorrent/rtorrent/config.d/
 COPY --chown=rtorrent:rtorrent .rtorrent.rc /home/rtorrent/
 
+VOLUME /home/rtorrent/rtorrent/config.d
 VOLUME /home/rtorrent/rtorrent/socket
 VOLUME /home/rtorrent/rtorrent/.session
 
