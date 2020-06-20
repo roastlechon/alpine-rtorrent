@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.12.0
 
 LABEL maintainer="Gianluca Gabrielli" mail="tuxmealux+dockerhub@protonmail.com"
 LABEL description="rTorrent on Alpine Linux, with a better Docker integration."
@@ -9,7 +9,7 @@ ARG UGID=1000
 
 RUN addgroup -g $UGID rtorrent && \
     adduser -S -u $UGID -G rtorrent rtorrent && \
-    apk add --no-cache rtorrent && \
+    apk add --no-cache xmlrpc-c rtorrent && \
     mkdir -p /home/rtorrent/rtorrent/config.d && \
     mkdir /home/rtorrent/rtorrent/.session && \
     mkdir /home/rtorrent/rtorrent/download && \
